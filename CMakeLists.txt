@@ -12,6 +12,6 @@ include_directories(${Boost_INCLUDE_DIR})
 add_subdirectory(json)
 add_subdirectory(spdlog)
 
-add_executable(learngb main.cpp)
+add_executable(learngb main.cpp TcpServer.h TcpServer.cpp TcpConnection.h TcpConnection.cpp)
 
 target_link_libraries(learngb PRIVATE nlohmann_json::nlohmann_json spdlog::spdlog Boost::thread Boost::system)
