@@ -11,17 +11,10 @@
 class TcpServer
 {
 public:
-    TcpServer(boost::asio::io_service& ioService)
-        : m_Acceptor(ioService, boost::asio::ip::tcp::endpoint(boost::asio::ip::tcp::v4(), 13))
-    {
-        startAccept();
-    }
+    explicit TcpServer(boost::asio::io_service& ioService);
 
 private:
-    void startAccept()
-    {
-        TcpConnection::pointer newConnection = TcpConnection::create(m_Acceptor.get_executor());
-    }
+    void startAccept();
 
     void handleAccept(TcpConnection::pointer newConnection, const boost::system::error_code& error);
 

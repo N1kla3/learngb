@@ -5,6 +5,7 @@
 #include "spdlog/sinks/stdout_color_sinks.h"
 #include "boost/asio.hpp"
 #include "boost/graph/adjacency_list.hpp"
+#include "TcpServer.h"
 
 int main()
 {
@@ -21,6 +22,17 @@ int main()
             {"task", {{"name", "myname"}, {"id", 123}}},
             {"description", "this is a task"}
     };
+
+    try
+    {
+        boost::asio::io_service service;
+        TcpServer server(service);
+        service.run();
+    }
+    catch (std::exception& e)
+    {
+        CoreLog->error(e.what());
+    }
 
     CoreLog->info(test.dump());
 
