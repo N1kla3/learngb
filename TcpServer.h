@@ -19,6 +19,7 @@ private:
     void handleAccept(TcpConnection::pointer newConnection, const boost::system::error_code& error);
 
     boost::asio::ip::tcp::acceptor m_Acceptor;
+    boost::asio::io_context m_Context;
 };
 
 

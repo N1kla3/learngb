@@ -2,6 +2,7 @@
 // Created by kolya on 10/4/2021.
 //
 
+#include <spdlog/spdlog.h>
 #include "TcpConnection.h"
 
 void TcpConnection::start()
@@ -17,5 +18,5 @@ void TcpConnection::start()
 
 void TcpConnection::handleWrite(const boost::system::error_code &error, size_t bytes)
 {
-
+    spdlog::get("Network")->info("message sent");
 }

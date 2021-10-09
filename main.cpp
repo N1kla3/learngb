@@ -14,6 +14,8 @@ int main()
     sinks.push_back(std::make_shared<spdlog::sinks::stdout_color_sink_mt>());
     auto NetworkLog = std::make_shared<spdlog::logger>("Network", begin(sinks), end(sinks));
     auto CoreLog = std::make_shared<spdlog::logger>("Core", begin(sinks), end(sinks));
+    spdlog::register_logger(NetworkLog);
+    spdlog::register_logger(CoreLog);
 
     CoreLog->info("---------- App Started ----------");
 
