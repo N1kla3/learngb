@@ -1,0 +1,14 @@
+{
+  "Type": "Article",
+  "Name": "loops",
+  "Information": "",
+  "Theme": [
+    {
+      "Name": "Basic",
+      "Weight": 1
+    }
+  ],
+  "DirectsTasks": [
+    "loops_1"
+  ]
+}

@@ -7,14 +7,16 @@
 #include "boost/asio.hpp"
 #include "boost/bind/bind.hpp"
 
+class DataHandler;
+
 class TcpConnection : public std::enable_shared_from_this<TcpConnection>
 {
 public:
     typedef std::shared_ptr<TcpConnection> pointer;
 
-    static pointer create(boost::asio::io_service& ioService)
+    static pointer create(boost::asio::io_service& ioService, const std::shared_ptr<DataHandler>& handler)
     {
-        return pointer(new TcpConnection(ioService));
+        return pointer(new TcpConnection(ioService, handler));
     }
 
     boost::asio::ip::tcp::socket& socket() { return m_Socket; }
@@ -22,8 +24,9 @@ public:
     void start();
 
 private:
-    explicit TcpConnection(boost::asio::io_service& ioService)
+    explicit TcpConnection(boost::asio::io_service& ioService, const std::shared_ptr<DataHandler>& handler)
         : m_Socket(ioService)
+        , m_HandlerPtr(handler)
     {
 
     }
@@ -38,8 +41,9 @@ private:
     }
 
     boost::asio::ip::tcp::socket m_Socket;
-
     std::string m_Message;
+
+    std::weak_ptr<DataHandler> m_HandlerPtr;
 };
 
 

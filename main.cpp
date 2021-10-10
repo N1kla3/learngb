@@ -6,6 +6,7 @@
 #include "boost/asio.hpp"
 #include "boost/graph/adjacency_list.hpp"
 #include "TcpServer.h"
+#include "DataHandler.h"
 
 int main()
 {
@@ -20,23 +21,17 @@ int main()
     CoreLog->info("---------- App Started ----------");
 
     boost::asio::io_context context;
-    nlohmann::json test = {
-            {"task", {{"name", "myname"}, {"id", 123}}},
-            {"description", "this is a task"}
-    };
 
     try
     {
         boost::asio::io_service service;
-        TcpServer server(service);
+        TcpServer server(service, std::make_shared<DataHandler>());
         service.run();
     }
     catch (std::exception& e)
     {
         CoreLog->error(e.what());
     }
-
-    CoreLog->info(test.dump());
 
     CoreLog->info("========== App Finished ==========");
     return 0;

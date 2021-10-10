@@ -1,0 +1,9 @@
+{
+  "Type": "Task",
+  "Name": "loops_1",
+  "Description": "for (int _ = 1; i < 3; _++){}",
+  "Answers": [
+    "i",
+    "i"
+  ]
+}

@@ -8,10 +8,12 @@
 #include "boost/asio/io_context.hpp"
 #include "TcpConnection.h"
 
+class DataHandler;
+
 class TcpServer
 {
 public:
-    explicit TcpServer(boost::asio::io_service& ioService);
+    explicit TcpServer(boost::asio::io_service& ioService, const std::shared_ptr<DataHandler>& handler);
 
 private:
     void startAccept();
@@ -20,6 +22,8 @@ private:
 
     boost::asio::ip::tcp::acceptor m_Acceptor;
     boost::asio::io_context m_Context;
+
+    std::shared_ptr<DataHandler> m_HandlerPtr;
 };
 
 
