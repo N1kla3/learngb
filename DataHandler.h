@@ -11,8 +11,9 @@
 class DataHandler
 {
 public:
-    typedef boost::property<boost::edge_weight_t, std::string> EdgeProperty;
-    typedef boost::adjacency_list<boost::vecS, boost::vecS, boost::undirectedS, boost::no_property, EdgeProperty> Graph;
+    typedef boost::property<boost::edge_weight_t, int> EdgeProperty;
+    typedef boost::property<boost::vertex_name_t, std::string> VertexProperty;
+    typedef boost::adjacency_list<boost::vecS, boost::vecS, boost::undirectedS, VertexProperty , EdgeProperty> Graph;
     typedef boost::graph_traits<Graph>::edge_iterator EdgeIterator;
 
     DataHandler();

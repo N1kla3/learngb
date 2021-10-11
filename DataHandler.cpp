@@ -8,15 +8,15 @@ DataHandler::DataHandler()
     : m_Graph(),
       m_Loader("../Data/")
 {
-    for (const auto& name : m_Loader.GetNames())
+    for (const std::string& name : m_Loader.GetNames())
     {
-        nlohmann::json info_json = m_Loader.GetJson(name);
+         nlohmann::json info_json = m_Loader.GetJson(name);
          auto theme = info_json["Theme"];
          if (theme.is_array())
          {
              for (auto item : theme)
              {
-                 
+                 boost::add_edge(1, 1, m_Graph);
              }
          }
     }
