@@ -24,15 +24,18 @@ DataHandler::DataHandler()
 
 nlohmann::json DataHandler::RequestTask(const std::string &Theme)
 {
-    return nullptr;
+    // TODO graph thing..
+    return m_Loader.GetJson("");
 }
 
 nlohmann::json DataHandler::RequestArticle(const std::string &Theme)
 {
-    return nullptr;
+    // TODO graph thing..
+    return m_Loader.GetJson("");
 }
 
 nlohmann::json DataHandler::RequestLiterature(const std::string &Theme)
 {
-    return nullptr;
+    // TODO graph thing..
+    return m_Loader.GetJson("");
 }

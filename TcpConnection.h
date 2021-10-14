@@ -32,6 +32,9 @@ private:
     }
 
     void handleWrite(const boost::system::error_code& error, size_t bytes);
+    void handleRead(const boost::system::error_code& error, size_t bytes);
+    void handleSizeRead(const boost::system::error_code& error, size_t bytes);
+    void startReceive();
 
     std::string make_daytime_string()
     {
@@ -42,6 +45,8 @@ private:
 
     boost::asio::ip::tcp::socket m_Socket;
     std::string m_Message;
+    std::string m_Read;
+    int32_t m_SizeReader;
 
     std::weak_ptr<DataHandler> m_HandlerPtr;
 };

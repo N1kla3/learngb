@@ -37,6 +37,7 @@ nlohmann::json DataLoader::GetJson(const std::string &name) const
     {
         return m_Data.at(name);
     }
+    return nullptr;
 }
 
 std::vector<std::string>& DataLoader::GetNames()
