@@ -1,0 +1,23 @@
+{
+  "Type": "Task",
+  "Name": "loops",
+  "Task": "tell me why",
+  "Difficulty": 0.1,
+  "AnswerType": "one answer",
+  "Answers": [
+    "sadfsf"
+  ],
+  "Theme": [
+    {
+      "Name": "Basic",
+      "Weight": 0.1
+    },
+    {
+      "Name": "something",
+      "Weight": 0.2
+    }
+  ],
+  "DirectArticles": [
+    "article"
+  ]
+}

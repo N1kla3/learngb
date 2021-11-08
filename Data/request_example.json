@@ -1,0 +1,11 @@
+{
+  "Theme": [
+    "theme",
+    "second theme"
+  ],
+  "Flags": [
+    "relative to theme"
+  ],
+  "Type": "task, article",
+  "Difficulty": 0.2
+}

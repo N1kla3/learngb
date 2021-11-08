@@ -1,0 +1,26 @@
+{
+  "Type": "Article",
+  "Name": "art",
+  "Information": "This is article",
+  "Difficulty": 0.1,
+  "RelatedThemes": [
+    "mytheme"
+  ],
+  "Links": [
+    "url",
+    "anotherurl"
+  ],
+  "Theme": [
+    {
+      "Name": "Basic",
+      "Weight": 0.1
+    },
+    {
+      "Name": "something",
+      "Weight": 0.2
+    }
+  ],
+  "DirectTasks": [
+    "ifAny"
+  ]
+}
