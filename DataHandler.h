@@ -8,21 +8,25 @@
 #include "boost/graph/adjacency_list.hpp"
 #include "DataLoader.h"
 
+struct VertexData
+{
+    std::string name;
+};
+
 class DataHandler
 {
 public:
-    typedef boost::property<boost::edge_weight_t, int> EdgeProperty;
-    typedef boost::property<boost::vertex_name_t, std::string> VertexProperty;
-    typedef boost::adjacency_list<boost::vecS, boost::vecS, boost::undirectedS, VertexProperty , EdgeProperty> Graph;
+    typedef boost::property<boost::edge_weight_t, float> EdgeProperty;
+    typedef boost::adjacency_list<boost::vecS, boost::vecS, boost::undirectedS, VertexData, EdgeProperty> Graph;
     typedef boost::graph_traits<Graph>::edge_iterator EdgeIterator;
 
     DataHandler();
 
-    nlohmann::json RequestTask(const std::string& Theme);
+    nlohmann::json RequestTask(const std::vector<std::string>& Themes, int difficulty);
 
-    nlohmann::json RequestArticle(const std::string& Theme);
+    nlohmann::json RequestArticle(const std::vector<std::string>& Themes, int difficulty);
 
-    nlohmann::json RequestLiterature(const std::string& Theme);
+    nlohmann::json RequestLiterature(const std::vector<std::string>& Themes, int difficulty);
 
 private:
     Graph m_Graph;
@@ -31,3 +35,6 @@ private:
 };
 
 
+//TODO: handle client request
+//TODO: Read DB
+//TODO: create graph

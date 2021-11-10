@@ -16,8 +16,11 @@ public:
 
     std::vector<std::string>& GetNames();
 
+    int GetIndex(const std::string& inName);
+
 private:
     std::vector<std::string> m_Names;
+    std::map<std::string, int> m_NamesMap;
     std::map<std::string, nlohmann::json> m_Data;
 };
 
