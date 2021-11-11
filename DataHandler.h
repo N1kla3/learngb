@@ -28,6 +28,10 @@ public:
 
     nlohmann::json RequestLiterature(const std::vector<std::string>& Themes, int difficulty);
 
+    std::vector<std::string> GetAllThemes();
+
+    std::vector<std::string> GetAllTasks();
+
 private:
     Graph m_Graph;
 

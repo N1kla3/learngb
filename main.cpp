@@ -17,6 +17,7 @@ int main()
     auto CoreLog = std::make_shared<spdlog::logger>("Core", begin(sinks), end(sinks));
     spdlog::register_logger(NetworkLog);
     spdlog::register_logger(CoreLog);
+    spdlog::set_pattern("[%D %H:%M:%S %z][thread %t]%^[%n][%l]%v%$");
 
     CoreLog->info("---------- App Started ----------");
 

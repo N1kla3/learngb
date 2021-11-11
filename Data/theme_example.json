@@ -1,5 +1,6 @@
 {
   "Name": "theme",
+  "Type": "Theme",
   "Themes": [
     {
       "Name": "one",

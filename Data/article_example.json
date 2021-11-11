@@ -2,7 +2,7 @@
   "Type": "Article",
   "Name": "art",
   "Information": "This is article",
-  "Difficulty": 0.1,
+  "Difficulty": 2,
   "RelatedThemes": [
     "mytheme"
   ],
