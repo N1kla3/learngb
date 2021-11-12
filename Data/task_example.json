@@ -9,15 +9,15 @@
   ],
   "Theme": [
     {
-      "Name": "Basic",
-      "Weight": 0.1
+      "Name": "theme_example",
+      "Weight": 1.1
     },
     {
-      "Name": "something",
-      "Weight": 0.2
+      "Name": "theme_two",
+      "Weight": 1.2
     }
   ],
   "DirectArticles": [
-    "article"
+    "article_example"
   ]
 }

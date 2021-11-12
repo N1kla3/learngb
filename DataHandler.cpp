@@ -12,8 +12,12 @@ DataHandler::DataHandler()
     for (const std::string& name : m_Loader.GetNames())
     {
         int index = m_Loader.GetIndex(name);
-        nlohmann::json info_json = m_Loader.GetJson(name);
         m_Graph[index].name = name;
+    }
+    for (const std::string& name : m_Loader.GetNames())
+    {
+        int index = m_Loader.GetIndex(name);
+        nlohmann::json info_json = m_Loader.GetJson(name);
         auto theme = info_json["Theme"];
         if (theme.is_array())
         {
@@ -31,20 +35,63 @@ DataHandler::DataHandler()
 
 nlohmann::json DataHandler::RequestTask(const std::vector<std::string>& Themes, int difficulty)
 {
-    // TODO graph thing..
-    return m_Loader.GetJson(Themes[0]);
+    std::vector<int> indexes(Themes.size());
+    int index = 0;
+    for (const auto& theme : Themes)
+    {
+        indexes[index] = m_Loader.GetIndex(theme);
+        index++;
+    }
+    for (auto i : indexes)
+    {
+        for (auto edge : m_Graph.m_vertices.at(i).m_out_edges)
+        {
+            if (edge.get_property().m_value > static_cast<float>(difficulty) / 3)
+            {
+                nlohmann::json js = m_Loader.GetJson(m_Loader.GetName(edge.get_target()));
+                if (js["Type"] == "Theme" || js["Type"] == "Article")
+                {
+                    break;
+                }
+                return js;
+            }
+        }
+    }
+
+    return nullptr;
 }
 
 nlohmann::json DataHandler::RequestArticle(const std::vector<std::string>& Themes, int difficulty)
 {
-    // TODO graph thing..
-    return m_Loader.GetJson(Themes[0]);
+    std::vector<int> indexes(Themes.size());
+    int index = 0;
+    for (const auto& theme : Themes)
+    {
+        indexes[index] = m_Loader.GetIndex(theme);
+        index++;
+    }
+    for (auto i : indexes)
+    {
+        for (auto edge : m_Graph.m_vertices.at(i).m_out_edges)
+        {
+            if (edge.get_property().m_value > static_cast<float>(difficulty) / 3)
+            {
+                nlohmann::json js = m_Loader.GetJson(m_Loader.GetName(edge.get_target()));
+                if (js["Type"] == "Theme" || js["Type"] == "Task")
+                {
+                    break;
+                }
+                return js;
+            }
+        }
+    }
+
+    return nullptr;
 }
 
 nlohmann::json DataHandler::RequestLiterature(const std::vector<std::string>& Themes, int difficulty)
 {
-    // TODO graph thing..
-    return m_Loader.GetJson(Themes[0]);
+    return nullptr;
 }
 
 std::vector<std::string> DataHandler::GetAllThemes()

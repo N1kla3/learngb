@@ -18,6 +18,8 @@ public:
 
     int GetIndex(const std::string& inName);
 
+    std::string GetName(int index);
+
 private:
     std::vector<std::string> m_Names;
     std::map<std::string, int> m_NamesMap;

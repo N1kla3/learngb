@@ -1,0 +1,10 @@
+{
+  "Name": "theme_two",
+  "Type": "Theme",
+  "Theme": [
+    {
+      "Name": "theme_example",
+      "Weight": 0.1
+    }
+  ]
+}

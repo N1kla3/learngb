@@ -57,3 +57,8 @@ int DataLoader::GetIndex(const std::string &inName)
     }
     return -1;
 }
+
+std::string DataLoader::GetName(int index)
+{
+    return m_Names[index];
+}

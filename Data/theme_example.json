@@ -1,10 +1,10 @@
 {
-  "Name": "theme",
+  "Name": "theme_example",
   "Type": "Theme",
-  "Themes": [
+  "Theme": [
     {
-      "Name": "one",
-      "W": 0.4
+      "Name": "theme_two",
+      "Weight": 0.7
     }
   ]
 }

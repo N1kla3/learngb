@@ -64,12 +64,14 @@ void TcpConnection::handleRead(const boost::system::error_code &error, size_t by
             {"description", "this is a task"}
     };
     */
+    spdlog::get("Network")->info("Received message - " + m_Read);
     m_Message = request_handle.GetData().dump();
     boost::asio::async_write(m_Socket,
                              boost::asio::buffer(m_Message),
                              boost::bind(&TcpConnection::handleWrite, shared_from_this(),
                                          boost::asio::placeholders::error,
                                          boost::asio::placeholders::bytes_transferred));
+    spdlog::get("Network")->info("Server message - " + m_Message);
     spdlog::get("Network")->info("Message sent");
 }
 
