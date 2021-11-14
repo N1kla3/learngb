@@ -27,7 +27,7 @@ DataRequest::DataRequest(const nlohmann::json& Request, const std::weak_ptr<Data
             std::vector<std::string> theme_names;
             for (const auto& item : Request["Theme"])
             {
-                theme_names.push_back(item["Name"].get<std::string>());
+                theme_names.push_back(item.get<std::string>());
             }
             m_Data = Handler.lock()->RequestTask(theme_names, Request["Difficulty"].get<int>());
         }
@@ -44,7 +44,7 @@ DataRequest::DataRequest(const nlohmann::json& Request, const std::weak_ptr<Data
             std::vector<std::string> theme_names;
             for (const auto& item : Request["Theme"])
             {
-                theme_names.push_back(item["Name"].get<std::string>());
+                theme_names.push_back(item.get<std::string>());
             }
             m_Data = Handler.lock()->RequestArticle(theme_names, Request["Difficulty"].get<int>());
         }

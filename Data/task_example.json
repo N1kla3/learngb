@@ -5,7 +5,11 @@
   "Difficulty": 1,
   "AnswerType": "one answer",
   "Answers": [
-    "sadfsf"
+    "yes",
+    "no"
+  ],
+  "RightAnswer": [
+    "yes"
   ],
   "Theme": [
     {

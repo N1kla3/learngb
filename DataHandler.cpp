@@ -51,7 +51,7 @@ nlohmann::json DataHandler::RequestTask(const std::vector<std::string>& Themes, 
                 nlohmann::json js = m_Loader.GetJson(m_Loader.GetName(edge.get_target()));
                 if (js["Type"] == "Theme" || js["Type"] == "Article")
                 {
-                    break;
+                    continue;
                 }
                 return js;
             }
@@ -79,7 +79,7 @@ nlohmann::json DataHandler::RequestArticle(const std::vector<std::string>& Theme
                 nlohmann::json js = m_Loader.GetJson(m_Loader.GetName(edge.get_target()));
                 if (js["Type"] == "Theme" || js["Type"] == "Task")
                 {
-                    break;
+                    continue;
                 }
                 return js;
             }

@@ -56,6 +56,7 @@ void TcpConnection::handleRead(const boost::system::error_code &error, size_t by
     //spdlog::get("Network")->info(m_SizeReader);
     //spdlog::get("Network")->info(m_Read);
 
+    spdlog::get("Network")->info("Received message - " + m_Read);
     nlohmann::json request = nlohmann::json::parse(m_Read);
     DataRequest request_handle(request, m_HandlerPtr);
    /*
@@ -64,7 +65,6 @@ void TcpConnection::handleRead(const boost::system::error_code &error, size_t by
             {"description", "this is a task"}
     };
     */
-    spdlog::get("Network")->info("Received message - " + m_Read);
     m_Message = request_handle.GetData().dump();
     boost::asio::async_write(m_Socket,
                              boost::asio::buffer(m_Message),
