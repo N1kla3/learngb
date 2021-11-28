@@ -1,0 +1,24 @@
+{
+  "Type": "Article",
+  "Name": "lvalue",
+  "Information": "an lvalue denotes an object whose resource cannot be reused, which includes most objects that we can think of in code. Lvalues include expressions that designate objects directly by their names (as in int y = f(x),  x and y are object names and are lvalues), but not only. For instance, the expression myVector[0] also is an lvalue. Now an lvalue reference is a reference that binds to an lvalue. lvalue references are marked with one ampersand (&).",
+  "Difficulty": 3,
+  "RelatedThemes": [
+  ],
+  "Links": [
+    "https://docs.microsoft.com/en-us/cpp/cpp/lvalues-and-rvalues-visual-cpp?view=msvc-170",
+    "https://en.cppreference.com/w/cpp/language/value_category"
+  ],
+  "Theme": [
+    {
+      "Name": "theme_move_semantics",
+      "Weight": 0.9
+    },
+    {
+      "Name": "theme_metaprogrammin",
+      "Weight": 0.2
+    }
+  ],
+  "DirectTasks": [
+  ]
+}

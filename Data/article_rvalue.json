@@ -1,0 +1,20 @@
+{
+  "Type": "Article",
+  "Name": "rvalue",
+  "Information": "an rvalue denotes an object whose resource can be reused, that is to say a disposable object. This typically includes temporary objects as they can’t be manipulated at the place they are created and are soon to be destroyed. In the expression g(MyClass()) for instance, MyClass() designates a temporary object that g can modify without impacting the code surrounding the expression. And an rvalue reference is a reference that binds to an rvalue. rvalue references are marked with two ampersands (&&).",
+  "Difficulty": 3,
+  "RelatedThemes": [
+    "theme_move_semantics"
+  ],
+  "Links": [
+    "https://ravesli.com/urok-190-ssylki-r-value/"
+  ],
+  "Theme": [
+    {
+      "Name": "theme_move_semantics",
+      "Weight": 1.0
+    }
+  ],
+  "DirectTasks": [
+  ]
+}

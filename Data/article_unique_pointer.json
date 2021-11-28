@@ -1,0 +1,21 @@
+{
+  "Type": "Article",
+  "Name": "Unique pointer",
+  "Information": "Unique pointers are smart pointers that help us in memory management. Unique pointers guarantee they delete their object if they are destructed, therefore, one less hassle for programmers. They follow “Resource Acquisition Is Initialization” (RAII) rule.\n\nPrerequisites\nHere, I assume you are aware of raw pointers and auto keyword.\n\nI compiled the examples using GCC 10.2 with flag -std=c++20.\n\nTo be focused, the headers and main() are omitted in some examples:\n\n#include <iostream> // For std::cout\n#include <memory> // For std::unique_ptr, std::make_unique\n\nusing namespace std; // dropping std::\n\n// class definitions\n\nint main(){\n\n    // implementations\n\n    return 0;\n}\nUnique pointer\nA unique pointer is defined as\n\nstd::unique_ptr<int> p(new int); // p is allocated a new int on the heap\n(.Get 1)\nIf the unique pointer is destructed, the allocated object on the heap is destructed too\n\n{\n  unique_ptr<int> p(new int);\n  // make use of p\n\n} // p is destructed, so the int object is destructed.\n(.Get 1)\nCompare the above code with raw pointers which are deleted explicitly by programmers.\n\nA unique pointer can also be created with std::make_unique\n\n#include <memory>\n#include <iostream>\nusing namespace std;\n\nstruct Person{\n  Person(string n):Name(n){}\n  ~Person(){cout<<\"Deleted!\";}\n  string Name;\n};\n\nint main(){\n    auto p = make_unique<Person>(\"Jack\"); // Person constructor is called.\n    return 0;\n}\nOwnership\nA unique pointer is a 1-to-1 relationship between a pointer (p) and its allocated object on the heap (new int).\n\nunique_ptr<int> p(new int);\n// p <-------->  object\np owns the object and the object has only one owner, p. So when programming, we can think of them as one entity.\n\n(.Get 1)\nA unique pointer cannot be copied or passed by value. However, the ownership of its object can be transferred.\n\nA unique pointer can be empty too",
+  "Difficulty": 3,
+  "RelatedThemes": [
+    "theme_smart_pointers"
+  ],
+  "Links": [
+    "https://docs.microsoft.com/en-us/cpp/cpp/how-to-create-and-use-unique-ptr-instances?view=msvc-170",
+    "https://en.cppreference.com/w/cpp/memory/unique_ptr"
+  ],
+  "Theme": [
+    {
+      "Name": "theme_smart_pointers",
+      "Weight": 1.0
+    }
+  ],
+  "DirectTasks": [
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "Type": "Article",
+  "Name": "Perfect forwarding",
+  "Information": "This is article",
+  "Difficulty": 3,
+  "RelatedThemes": [
+  ],
+  "Links": [
+    "https://www.modernescpp.com/index.php/perfect-forwarding",
+    "https://eli.thegreenplace.net/2014/perfect-forwarding-and-universal-references-in-c"
+  ],
+  "Theme": [
+    {
+      "Name": "theme_move_semantics",
+      "Weight": 0.8
+    },
+    {
+      "Name": "theme_metaprogramming",
+      "Weight": 0.8
+    }
+  ],
+  "DirectTasks": [
+  ]
+}

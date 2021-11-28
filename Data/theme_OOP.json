@@ -1,0 +1,14 @@
+{
+  "Name": "theme_OOP",
+  "Type": "Theme",
+  "Theme": [
+    {
+      "Name": "theme_Basic",
+      "Weight": 0.9
+    },
+    {
+      "Name": "theme_smart_pointers",
+      "Weight": 0.8
+    }
+  ]
+}

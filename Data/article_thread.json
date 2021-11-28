@@ -1,0 +1,20 @@
+{
+  "Type": "Article",
+  "Name": "Thread",
+  "Information": "Multithreading support was introduced in C+11. Prior to C++11, we had to use POSIX threads or p threads library in C. While this library did the job the lack of any standard language provided feature-set caused serious portability issues. C++ 11 did away with all that and gave us std::thread. The thread classes and related functions are defined in the thread header file.\n\nstd::thread is the thread class that represents a single thread in C++. To start a thread we simply need to create a new thread object and pass the executing code to be called (i.e, a callable object) into the constructor of the object. Once the object is created a new thread is launched which will execute the code specified in callable.",
+  "Difficulty": 3,
+  "RelatedThemes": [
+    "theme_concurrency"
+  ],
+  "Links": [
+    "anotherurl"
+  ],
+  "Theme": [
+    {
+      "Name": "theme_concurrency",
+      "Weight": 1.0
+    }
+  ],
+  "DirectTasks": [
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "Name": "theme_metaprogramming",
+  "Type": "Theme",
+  "Theme": [
+    {
+      "Name": "theme_move_semantics",
+      "Weight": 0.7
+    },
+    {
+      "Name": "theme_OOP",
+      "Weight": 0.8
+    }
+  ]
+}

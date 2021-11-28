@@ -1,0 +1,22 @@
+{
+  "Type": "Article",
+  "Name": "auto keyword",
+  "Information": "A placeholder type specifier may appear in the following contexts:\n\nin the type specifier of a variable: auto x = expr;. The type is deduced from the initializer.\nIf the placeholder type specifier is auto or type-constraint auto (since C++20), the variable type is deduced from the initializer using the rules for template argument deduction from a function call (see template argument deduction — other contexts for details).\nFor example, given const auto& i = expr;, the type of i is exactly the type of the argument u in an imaginary template template<class U> void f(const U& u) if the function call f(expr) was compiled. Therefore, auto&& may be deduced either as an lvalue reference or rvalue reference according to the initializer, which is used in range-based for loop.\nIf the placeholder type specifier is decltype(auto) or type-constraint decltype(auto) (since C++20), the deduced type is decltype(expr), where expr is the initializer.\n\n(since C++14)\nIf the placeholder type specifier is used to declare multiple variables, the deduced types must match. For example, the declaration auto i = 0, d = 0.0; is ill-formed, while the declaration auto i = 0, *p = &i; is well-formed and the auto is deduced as int.\n\nin the type-id of a new expression. The type is deduced from the initializer. For new T init (where T contains a placeholder type, init is either a parenthesized initializer or a brace-enclosed initializer list), the type of T is deduced as if for variable x in the invented declaration T x init;.\n(since C++14) in the return type of a function or lambda expression: auto& f();. The return type is deduced from the operand of its non-discarded (since C++17) return statement.\nSee function — return type deduction.\n(since C++17) in the parameter declaration of a non-type template parameter: template<auto I> struct A;. Its type is deduced from the corresponding argument.",
+  "Difficulty": 1,
+  "RelatedThemes": [
+    "theme_Basic"
+  ],
+  "Links": [
+    "https://docs.microsoft.com/en-us/cpp/cpp/auto-cpp?view=msvc-170",
+    "https://en.cppreference.com/w/cpp/language/auto"
+  ],
+  "Theme": [
+    {
+      "Name": "theme_Basic",
+      "Weight": 1.0
+    }
+  ],
+  "DirectTasks": [
+
+  ]
+}

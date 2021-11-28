@@ -1,0 +1,18 @@
+{
+  "Name": "theme_containers",
+  "Type": "Theme",
+  "Theme": [
+    {
+      "Name": "theme_move_semantics",
+      "Weight": 0.6
+    },
+    {
+      "Name": "theme_smart_pointers",
+      "Weight": 0.4
+    },
+    {
+      "Name": "theme_metaprogramming",
+      "Weight": 0.7
+    }
+  ]
+}

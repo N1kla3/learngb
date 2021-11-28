@@ -1,0 +1,25 @@
+{
+  "Type": "Article",
+  "Name": "Class",
+  "Information": "The main purpose of C++ programming is to add object orientation to the C programming language and classes are the central feature of C++ that supports object-oriented programming and are often called user-defined types.\n\nA class is used to specify the form of an object and it combines data representation and methods for manipulating that data into one neat package. The data and functions within a class are called members of the class.\n\nC++ Class Definitions\nWhen you define a class, you define a blueprint for a data type. This doesn't actually define any data, but it does define what the class name means, that is, what an object of the class will consist of and what operations can be performed on such an object.\n\nA class definition starts with the keyword class followed by the class name; and the class body, enclosed by a pair of curly braces. A class definition must be followed either by a semicolon or a list of declarations. For example, we defined the Box data type using the keyword class as follows −\n\nclass Box {\n   public:\n      double length;   // Length of a box\n      double breadth;  // Breadth of a box\n      double height;   // Height of a box\n};\nThe keyword public determines the access attributes of the members of the class that follows it. A public member can be accessed from outside the class anywhere within the scope of the class object. You can also specify the members of a class as private or protected which we will discuss in a sub-section.",
+  "Difficulty": 1,
+  "RelatedThemes": [
+    "theme_OOP"
+  ],
+  "Links": [
+    "https://www.geeksforgeeks.org/c-classes-and-objects/",
+    "https://en.cppreference.com/w/cpp/language/classes"
+  ],
+  "Theme": [
+    {
+      "Name": "theme_Basic",
+      "Weight": 1.0
+    },
+    {
+      "Name": "theme_OOP",
+      "Weight": 1.0
+    }
+  ],
+  "DirectTasks": [
+  ]
+}

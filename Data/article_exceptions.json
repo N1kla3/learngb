@@ -1,0 +1,24 @@
+{
+  "Type": "Article",
+  "Name": "Exceptions",
+  "Information": "Exceptions provide a way to react to exceptional circumstances (like runtime errors) in programs by transferring control to special functions called handlers.\n\nTo catch exceptions, a portion of code is placed under exception inspection. This is done by enclosing that portion of code in a try-block. When an exceptional circumstance arises within that block, an exception is thrown that transfers the control to the exception handler. If no exception is thrown, the code continues normally and all handlers are ignored.\n\nAn exception is thrown by using the throw keyword from inside the try block. Exception handlers are declared with the keyword catch, which must be placed immediately after the try block. #include <iostream>\nusing namespace std;\n\nint main () {\n  try\n  {\n    throw 20;\n  }\n  catch (int e)\n  {\n    cout << \"An exception occurred. Exception Nr. \" << e << '\\n';\n  }\n  return 0;\n}",
+  "Difficulty": 1,
+  "RelatedThemes": [
+  ],
+  "Links": [
+    "https://www.tutorialspoint.com/cplusplus/cpp_exceptions_handling.htm",
+    "https://www.w3schools.com/cpp/cpp_exceptions.asp"
+  ],
+  "Theme": [
+    {
+      "Name": "theme_Basic",
+      "Weight": 1.0
+    },
+    {
+      "Name": "theme_OOP",
+      "Weight": 0.7
+    }
+  ],
+  "DirectTasks": [
+  ]
+}
