@@ -1,7 +1,7 @@
 {
   "Type": "Article",
   "Name": "Perfect forwarding",
-  "Information": "This is article",
+  "Information": "Look for std::forward",
   "Difficulty": 3,
   "RelatedThemes": [
   ],
