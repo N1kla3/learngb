@@ -1,0 +1,25 @@
+{
+  "Type": "Task",
+  "Name": "Loops training",
+  "Task": "What is value of 'i' after this block of code: \n for (int i = 0; i < 3; i++) \n { \n if (i == 1) break; \n }",
+  "Difficulty": 1,
+  "AnswerType": "one answer",
+  "Answers": [
+    "3",
+    "1",
+    "2",
+    "0"
+  ],
+  "RightAnswer": [
+    "1"
+  ],
+  "Theme": [
+    {
+      "Name": "theme_Basic",
+      "Weight": 1.1
+    }
+  ],
+  "DirectArticles": [
+    "article_loops"
+  ]
+}
