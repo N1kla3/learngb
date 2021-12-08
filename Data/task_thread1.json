@@ -1,0 +1,24 @@
+{
+  "Type": "Task",
+  "Name": "Thread training",
+  "Task": "What issue only threads can cause",
+  "Difficulty": 2,
+  "AnswerType": "one answer",
+  "Answers": [
+    "Deadlock",
+    "Race condition",
+    "Runtime error"
+  ],
+  "RightAnswer": [
+    "Deadlock"
+  ],
+  "Theme": [
+    {
+      "Name": "theme_concurrency",
+      "Weight": 1.0
+    }
+  ],
+  "DirectArticles": [
+    "article_thread"
+  ]
+}

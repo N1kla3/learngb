@@ -1,0 +1,23 @@
+{
+  "Type": "Task",
+  "Name": "Move semantic training",
+  "Task": "Is it Perfect Forwarding? \n template <typename T1, typename T2>\nvoid wrapper(T1 e1, T2 e2) {\n    func(e1, e2);\n}",
+  "Difficulty": 3,
+  "AnswerType": "one answer",
+  "Answers": [
+    "Yes",
+    "No"
+  ],
+  "RightAnswer": [
+    "No"
+  ],
+  "Theme": [
+    {
+      "Name": "theme_move_semantics",
+      "Weight": 1.0
+    }
+  ],
+  "DirectArticles": [
+    "article_perfect_forwarding"
+  ]
+}

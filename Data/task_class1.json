@@ -1,0 +1,25 @@
+{
+  "Type": "Task",
+  "Name": "Class training",
+  "Task": "#include<iostream>\nusing namespace std;\n \nclass Empty {};\n \nint main()\n{\n  cout << sizeof(Empty);\n  return 0;\n}",
+  "Difficulty": 1,
+  "AnswerType": "one answer",
+  "Answers": [
+    "Non zero value",
+    "0",
+    "Runtime error",
+    "Compile error"
+  ],
+  "RightAnswer": [
+    "Non zero value"
+  ],
+  "Theme": [
+    {
+      "Name": "theme_OOP",
+      "Weight": 1.0
+    }
+  ],
+  "DirectArticles": [
+    "article_classes"
+  ]
+}

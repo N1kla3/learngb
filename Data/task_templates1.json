@@ -1,0 +1,25 @@
+{
+  "Type": "Task",
+  "Name": "Template training",
+  "Task": "#include <iostream>\nusing namespace std;\n\ntemplate <typename T>\nT max(T x, T y)\n{\n    return (x > y)? x : y;\n}\nint main()\n{\n    cout << max(3, 7) << std::endl;\n    cout << max(3.0, 7.0) << std::endl;\n    cout << max(3, 7.0) << std::endl;\n    return 0;\n}",
+  "Difficulty": 2,
+  "AnswerType": "one answer",
+  "Answers": [
+    "7 7.0 7.0",
+    "Compiler Error in all cout statements as data type is not specified.",
+    "Compiler Error in last cout statement as call to max is ambiguous",
+    "None of the above"
+  ],
+  "RightAnswer": [
+    "Compiler Error in last cout statement as call to max is ambiguous."
+  ],
+  "Theme": [
+    {
+      "Name": "theme_metaprogramming",
+      "Weight": 1.0
+    }
+  ],
+  "DirectArticles": [
+    "article_templates"
+  ]
+}

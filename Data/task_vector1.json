@@ -1,0 +1,23 @@
+{
+  "Type": "Task",
+  "Name": "Container training",
+  "Task": "True or false. It can be inefficient to insert or delete elements from the middle of a vector, especially if the vector is large.",
+  "Difficulty": 1,
+  "AnswerType": "one answer",
+  "Answers": [
+    "True",
+    "False"
+  ],
+  "RightAnswer": [
+    "True"
+  ],
+  "Theme": [
+    {
+      "Name": "theme_containers",
+      "Weight": 1.0
+    }
+  ],
+  "DirectArticles": [
+    "article_vector"
+  ]
+}

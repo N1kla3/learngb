@@ -1,0 +1,25 @@
+{
+  "Type": "Task",
+  "Name": "Pointer training",
+  "Task": "Pointer contains ... ",
+  "Difficulty": 1,
+  "AnswerType": "one answer",
+  "Answers": [
+    "Address of the variable",
+    "None of this",
+    "Name of the variable",
+    "Value of the variable"
+  ],
+  "RightAnswer": [
+    "Address of the variable"
+  ],
+  "Theme": [
+    {
+      "Name": "theme_smart_pointers",
+      "Weight": 1.0
+    }
+  ],
+  "DirectArticles": [
+    "article_pointers"
+  ]
+}
