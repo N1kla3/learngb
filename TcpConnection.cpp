@@ -53,18 +53,11 @@ void TcpConnection::handleRead(const boost::system::error_code &error, size_t by
         spdlog::get("Network")->info("connection closed or something gone wrong");
         return;
     }
-    //spdlog::get("Network")->info(m_SizeReader);
-    //spdlog::get("Network")->info(m_Read);
 
     spdlog::get("Network")->info("Received message - " + m_Read);
     nlohmann::json request = nlohmann::json::parse(m_Read);
     DataRequest request_handle(request, m_HandlerPtr);
-   /*
-    nlohmann::json test = {
-            {"task", {{"name", "myname"}, {"id", 123}}},
-            {"description", "this is a task"}
-    };
-    */
+
     m_Message = request_handle.GetData().dump();
     boost::asio::async_write(m_Socket,
                              boost::asio::buffer(m_Message),

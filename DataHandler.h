@@ -33,12 +33,13 @@ public:
     std::vector<std::string> GetAllTasks();
 
 private:
+    void CalculateDependency(){};
+
     Graph m_Graph;
 
     DataLoader m_Loader;
 };
 
-
-//TODO: handle client request
-//TODO: Read DB
-//TODO: create graph
+//TODO smart calculations
+//TODO more tasks in database
+//TODO theme priority
